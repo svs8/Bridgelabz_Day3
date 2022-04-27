@@ -13,7 +13,7 @@ static double length(int a1,int b1,int a2, int b2)
     public static void main(String[] args) {
 
     System.out.println("line 1 Co-ordinates");
-    double l1=length(1,1,9,9);
+    double l1=length(2,2,4,4);
     System.out.println("length of the line 1 is "+l1);
     System.out.println("line 2 Co-ordinates");
     double l2=length(1,1,9,9);
@@ -21,9 +21,16 @@ static double length(int a1,int b1,int a2, int b2)
 
         String length1 = l1+"";
         String length2 = l2+"";
-    if(length1.equals(length2))
+
+        int res=length1.compareTo(length2);
+
+    if(res>0)
     {
-        System.out.println("Both line 1 and 2 are equal");
+        System.out.println("line 1 is longer than line 2");
+    } else if (res<0) {
+        System.out.println("line 1 is smaller than line 2");
+    }else{
+        System.out.println("line 1 and line 2 are equal in length");
     }
     }
 }
